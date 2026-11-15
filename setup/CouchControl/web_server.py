@@ -11,7 +11,7 @@ import pyautogui
 
 log = logging.getLogger("couchcontrol.web")
 PORT = int(os.getenv("WEB_SERVER_PORT", "8765"))
-ALLOWED_ORIGIN = "https://kroshixxx-pixel.github.io/CouchControl_en"
+ALLOWED_ORIGIN = "https://kroshixxx-pixel.github.io"
 
 
 def verify_init_data(raw: str) -> bool:

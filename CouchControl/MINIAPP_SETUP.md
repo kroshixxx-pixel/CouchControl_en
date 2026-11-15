@@ -11,7 +11,7 @@ The Mini App is currently a front-end demo. Its screen preview and controls are 
 
 The expected address is:
 
-https://kroshixxx-pixel.github.io/CouchControl/
+https://kroshixxx-pixel.github.io/CouchControl_en/
 
 ## 2. Tell Telegram the Mini App domain
 

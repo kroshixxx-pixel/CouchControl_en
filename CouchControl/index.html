@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#090d1d">
+  <title>CouchControl</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div class="brand-mark">C</div>
+      <div class="brand"><strong>CouchControl</strong><span>REMOTE CONSOLE</span></div>
+      <div class="connection"><i></i><span>DEMO</span></div>
+    </header>
+
+    <section class="screen-card">
+      <div class="screen-head"><span>PC SCREEN</span><span class="live-dot">● PREVIEW</span></div>
+      <div class="screen screenshot-screen">
+        <div class="screen-glow"></div>
+        <div class="monitor-icon"><span></span></div>
+        <strong>PC screen screenshot</strong>
+        <p>The image will be sent directly to your bot chat</p>
+        <button id="send-screenshot" class="screenshot-btn" type="button">📸 Take screenshot</button>
+        <small id="screenshot-status">Sent via Telegram</small>
+      </div>
+      <div class="screen-foot"><span><b></b> On-demand screenshot</span><span>1 tap</span></div>
+    </section>
+
+    <section class="control-panel">
+      <div class="panel-title"><div><span class="eyebrow">CONTROL</span><h1 id="mode-title">Touchpad</h1></div><span class="mode-count">01 / 03</span></div>
+      <nav class="tabs" aria-label="Control mode">
+        <button class="tab active" data-mode="touchpad"><span>⌖</span>Mouse</button>
+        <button class="tab" data-mode="keyboard"><span>⌨</span>Keyboard</button>
+        <button class="tab" data-mode="buttons"><span>◈</span>Buttons</button>
+      </nav>
+
+      <section class="mode-view active" id="touchpad-view">
+        <div class="connection-setup">
+          <label for="api-url">SECURE CONNECTION ADDRESS</label>
+          <div class="connection-row"><input id="api-url" type="url" placeholder="https://....trycloudflare.com" inputmode="url"><button id="connect-btn" type="button">Connect</button></div>
+          <small id="connection-status">Start the secure connection on your PC first</small>
+        </div>
+        <div class="mouse-pad">
+          <div class="speed-row">
+            <label for="mouse-speed">SPEED</label>
+            <select id="mouse-speed">
+              <option value="14">Slow</option>
+              <option value="28" selected>Normal</option>
+              <option value="50">Fast</option>
+            </select>
+          </div>
+          <div class="direction-grid" aria-label="Mouse movement direction">
+            <button class="direction-btn" data-dx="-1" data-dy="-1" aria-label="Up-left">↖</button>
+            <button class="direction-btn" data-dx="0" data-dy="-1" aria-label="Up">↑</button>
+            <button class="direction-btn" data-dx="1" data-dy="-1" aria-label="Up-right">↗</button>
+            <button class="direction-btn" data-dx="-1" data-dy="0" aria-label="Left">←</button>
+            <button class="direction-btn stop-btn" data-stop="true" aria-label="Stop">●</button>
+            <button class="direction-btn" data-dx="1" data-dy="0" aria-label="Right">→</button>
+            <button class="direction-btn" data-dx="-1" data-dy="1" aria-label="Down-left">↙</button>
+            <button class="direction-btn" data-dx="0" data-dy="1" aria-label="Down">↓</button>
+            <button class="direction-btn" data-dx="1" data-dy="1" aria-label="Down-right">↘</button>
+          </div>
+          <p class="mouse-help">Hold an arrow to keep moving</p>
+        </div>
+        <div class="mouse-actions">
+          <button class="mouse-btn" data-button="left" type="button">LEFT CLICK</button>
+          <button class="mouse-btn" data-button="right" type="button">RIGHT CLICK</button>
+        </div>
+      </section>
+
+      <section class="mode-view" id="keyboard-view">
+        <div class="keyboard-note">The keyboard will be available here after connecting the PC</div>
+        <div class="key-row"><button class="key">Esc</button><button class="key">Tab</button><button class="key wide">⌫</button><button class="key">↵</button></div>
+        <div class="key-row"><button class="key">Ctrl</button><button class="key">Alt</button><button class="key space">Space</button></div>
+      </section>
+
+      <section class="mode-view" id="buttons-view">
+        <div class="action-grid">
+          <button class="action-tile"><span>◀</span><b>Back</b></button>
+          <button class="action-tile"><span>Ⅱ</span><b>Pause</b></button>
+          <button class="action-tile"><span>▶</span><b>Play</b></button>
+          <button class="action-tile"><span>🔊</span><b>Volume</b></button>
+          <button class="action-tile"><span>⌂</span><b>Desktop</b></button>
+          <button class="action-tile"><span>⏻</span><b>Power</b></button>
+        </div>
+      </section>
+      <p class="demo-hint" id="demo-hint">The interface is ready. PC control is not connected yet.</p>
+    </section>
+    <footer>COUCHCONTROL <span>•</span> CONTROL FROM ANYWHERE</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>

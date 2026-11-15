@@ -4,7 +4,7 @@
 
 **Control your own Windows PC through a personal Telegram bot.**
 
-> **English documentation is available.** This file is the English version of the project documentation. The Russian version is available in [README.md](README.md).
+The Russian version of the project is available here: [CouchControl — Русская версия](https://github.com/kroshixxx-pixel/CouchControl).
 
 CouchControl is a Windows agent paired with a Telegram bot. It lets an authorized user control selected PC functions from a private Telegram chat.
 
